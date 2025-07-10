@@ -19,7 +19,7 @@ const RecruiterPanel = () => {
 
   const fetchGigs = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/gigs");
+      const res = await axios.get("https://workerbuild-backend.onrender.com/api/gigs");
       setGigs(res.data.reverse());
     } catch (err) {
       console.error("❌ Failed to fetch gigs", err);
@@ -41,7 +41,7 @@ const RecruiterPanel = () => {
           .filter((s) => s),
       };
 
-      const res = await axios.post("http://localhost:5000/api/gigs/create", payload);
+      const res = await axios.post("https://workerbuild-backend.onrender.com/api/gigs/create", payload);
 
       if (res.status === 201) {
         setForm({

@@ -20,7 +20,7 @@ const Register = () => {
     setError('');
 
     try {
-      const res = await axios.post('http://localhost:5000/api/auth/register', form);
+      const res = await axios.post('https://workerbuild-backend.onrender.com/api/auth/register', form);
       setMessage('✅ Registered successfully. You can now login.');
     } catch (err) {
       setError(err.response?.data?.message || 'Registration failed.');

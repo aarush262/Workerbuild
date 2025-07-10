@@ -13,7 +13,7 @@ const LearningHub = () => {
     setLoading(true);
     try {
       const res = await axios.get(
-        `http://localhost:5000/api/youtube/search?q=${encodeURIComponent(searchQuery)}`
+        `https://workerbuild-backend.onrender.com/api/youtube/search?q=${encodeURIComponent(searchQuery)}`
       );
       setVideos(res.data.items);
     } catch (err) {

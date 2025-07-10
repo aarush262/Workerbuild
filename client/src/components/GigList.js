@@ -7,7 +7,7 @@ const GigList = () => {
   const [searchQuery, setSearchQuery] = useState('');
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/gigs')
+    axios.get('https://workerbuild-backend.onrender.com')
       .then(res => {
         setGigs(res.data);
         setFilteredGigs(res.data);

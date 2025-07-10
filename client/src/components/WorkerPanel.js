@@ -22,7 +22,7 @@ const WorkerPanel = () => {
 
   const fetchGigs = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/gigs");
+      const res = await axios.get('https://workerbuild-backend.onrender.com/api/gigs');
       setGigs(res.data.reverse());
       setFilteredGigs(res.data.reverse());
     } catch (err) {
@@ -61,7 +61,7 @@ const WorkerPanel = () => {
 
     try {
       const res = await axios.post(
-        `http://localhost:5000/api/gigs/${selectedGigId}/apply`,
+        `https://workerbuild-backend.onrender.com/api/gigs/${selectedGigId}/apply`,
         {
           ...form,
           skills: form.skills.split(",").map((s) => s.trim()),
